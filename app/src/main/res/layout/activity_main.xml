@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:id="@+id/team1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_1"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreTeam1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/app_bar" />
+
+    <ImageButton
+        android:id="@+id/minusTeam1"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:background="@drawable/button_disabled_bg"
+        android:clickable="false"
+        android:contentDescription="@string/minus_button"
+        android:hapticFeedbackEnabled="true"
+        android:src="@drawable/ic_minus_disabled"
+        app:layout_constraintBottom_toTopOf="@+id/team2"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTeam1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/team1" />
+
+    <TextView
+        android:id="@+id/scoreTeam1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/plusTeam1"
+        app:layout_constraintEnd_toStartOf="@+id/plusTeam1"
+        app:layout_constraintStart_toEndOf="@+id/minusTeam1"
+        app:layout_constraintTop_toTopOf="@id/minusTeam1" />
+
+    <ImageButton
+        android:id="@+id/plusTeam1"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:background="@drawable/button_enabled_bg"
+        android:contentDescription="@string/plus_button"
+        android:src="@drawable/ic_plus_enabled"
+        app:layout_constraintBottom_toTopOf="@id/team2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreTeam1"
+        app:layout_constraintTop_toBottomOf="@id/team1" />
+
+    <TextView
+        android:id="@+id/team2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/team_2"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/scoreTeam2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/scoreTeam1" />
+
+    <ImageButton
+        android:id="@+id/minusTeam2"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:background="@drawable/button_disabled_bg"
+        android:clickable="false"
+        android:contentDescription="@string/minus_button"
+        android:src="@drawable/ic_minus_disabled"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintEnd_toStartOf="@+id/scoreTeam2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/team2" />
+
+    <TextView
+        android:id="@+id/scoreTeam2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/zero"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@id/plusTeam2"
+        app:layout_constraintEnd_toStartOf="@id/plusTeam2"
+        app:layout_constraintStart_toEndOf="@+id/minusTeam2"
+        app:layout_constraintTop_toTopOf="@id/minusTeam2" />
+
+    <ImageButton
+        android:id="@+id/plusTeam2"
+        android:layout_width="@dimen/button_size"
+        android:layout_height="@dimen/button_size"
+        android:background="@drawable/button_enabled_bg"
+        android:contentDescription="@string/plus_button"
+        android:src="@drawable/ic_plus_enabled"
+        app:layout_constraintBottom_toTopOf="@+id/buttonReset"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/scoreTeam2"
+        app:layout_constraintTop_toBottomOf="@+id/team2" />
+
+    <Button
+        android:id="@+id/buttonReset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/reset"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scoreTeam2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

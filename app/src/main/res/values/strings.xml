@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Scorekeep</string>
+    <string name="team_1">Team 1</string>
+    <string name="team_2">Team 2</string>
+    <string name="zero">0</string>
+    <string name="minus_button">Minus Button</string>
+    <string name="plus_button">Plus Button</string>
+    <string name="start">START</string>
+    <string name="reset">RESET</string>
+    <string name="stop">STOP</string>
+    <string name="dark_mode">Dark Mode</string>
+    <string name="light_mode">Light Mode</string>
+</resources>
